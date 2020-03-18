@@ -1004,7 +1004,6 @@ int f2fs_trim_fs(struct f2fs_sb_info *sbi, struct fstrim_range *range)
 						range->len < sbi->blocksize)
 		return -EINVAL;
 
-	cpc.trimmed = 0;
 	if (end <= MAIN_BLKADDR(sbi))
 		goto out;
 
