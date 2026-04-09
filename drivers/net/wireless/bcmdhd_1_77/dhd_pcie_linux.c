@@ -206,10 +206,10 @@ MODULE_DEVICE_TABLE(pci, dhdpcie_pci_devid);
 /* Power Management Hooks */
 #ifdef DHD_PCIE_RUNTIMEPM
 static const struct dev_pm_ops dhd_pcie_pm_ops = {
-	.prepare = NULL,
-	.suspend = NULL,
-	.resume = NULL,
-	.complete = NULL,
+	.prepare = dhdpcie_pm_prepare,
+	.suspend = dhdpcie_pm_suspend,
+	.resume = dhdpcie_pm_resume,
+	.complete = dhdpcie_pm_complete,
 };
 #endif /* DHD_PCIE_RUNTIMEPM */
 
